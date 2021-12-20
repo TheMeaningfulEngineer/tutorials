@@ -1,0 +1,12 @@
+[Unit]
+Description=Crasher
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+ExecStart=/root/crasher.py --crash-interval-random 40 60
+
+[Install]
+WantedBy=multi-user.target

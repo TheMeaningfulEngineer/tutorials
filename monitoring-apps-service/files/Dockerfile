@@ -1,0 +1,11 @@
+[Unit]
+Description=Crasher
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/crasher.py --never-crash
+
+[Install]
+WantedBy=multi-user.target
+
